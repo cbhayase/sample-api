@@ -62,6 +62,6 @@ public class JwtService {
     // トークンの検証
     public Boolean validateToken(String token, String username) {
         String tokenUsername = getUsernameFromToken(token);
-        return tokenUsername.equals(username) && !isTokenExpired(token);
+        return (tokenUsername.equals(username) && !isTokenExpired(token));
     }
 }

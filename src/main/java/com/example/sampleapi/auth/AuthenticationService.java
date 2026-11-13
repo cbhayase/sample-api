@@ -18,11 +18,11 @@ public class AuthenticationService {
     }
 
     public LoginResponse authentication(LoginRequest loginRequest) {
-        if (LoginRequest.getUsername() == null || loginRequest.getUsername().isEmpty()) {
+        if (loginRequest.getUsername() == null || loginRequest.getUsername().isEmpty()) {
             throw new LoginArgumentNotValidException("username is empty");
         }
 
-        if (LoginRequest.getPassword() == null || loginRequest.getPassword().isEmpty()) {
+        if (loginRequest.getPassword() == null || loginRequest.getPassword().isEmpty()) {
             throw new LoginArgumentNotValidException("password is empty");
         }
 
